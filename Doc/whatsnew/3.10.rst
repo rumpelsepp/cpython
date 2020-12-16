@@ -287,6 +287,9 @@ socket
 The exception :exc:`socket.timeout` is now an alias of :exc:`TimeoutError`.
 (Contributed by Christian Heimes in :issue:`42413`.)
 
+The socket module gained support for CAN_ISOTP constants available on Linux >= 5.10.
+(Contributed by Stefan Tatschner in :issue:`10141`.)
+
 sys
 ---
 
