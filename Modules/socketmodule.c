@@ -7689,6 +7689,29 @@ PyInit__socket(void)
 #ifdef CAN_ISOTP
     PyModule_AddIntMacro(m, CAN_ISOTP);
 #endif
+#ifdef HAVE_LINUX_CAN_ISOTP_H
+    PyModule_AddIntMacro(m, SOL_CAN_ISOTP);
+
+    /* Valuetypes for SOL_CAN_ISOTP */
+    PyModule_AddIntMacro(m, CAN_ISOTP_OPTS);
+    PyModule_AddIntMacro(m, CAN_ISOTP_RECV_FC);
+    PyModule_AddIntMacro(m, CAN_ISOTP_TX_STMIN);
+    PyModule_AddIntMacro(m, CAN_ISOTP_RX_STMIN);
+    PyModule_AddIntMacro(m, CAN_ISOTP_LL_OPTS);
+
+    /* ISO_TP setsockopt flags */
+    PyModule_AddIntMacro(m, CAN_ISOTP_LISTEN_MODE);
+    PyModule_AddIntMacro(m, CAN_ISOTP_EXTEND_ADDR);
+    PyModule_AddIntMacro(m, CAN_ISOTP_RX_PADDING);
+    PyModule_AddIntMacro(m, CAN_ISOTP_CHK_PAD_LEN);
+    PyModule_AddIntMacro(m, CAN_ISOTP_CHK_PAD_DATA);
+    PyModule_AddIntMacro(m, CAN_ISOTP_HALF_DUPLEX);
+    PyModule_AddIntMacro(m, CAN_ISOTP_FORCE_TXSTMIN);
+    PyModule_AddIntMacro(m, CAN_ISOTP_FORCE_RXSTMIN);
+    PyModule_AddIntMacro(m, CAN_ISOTP_RX_EXT_ADDR);
+    PyModule_AddIntMacro(m, CAN_ISOTP_WAIT_TX_DONE);
+    PyModule_AddIntMacro(m, CAN_ISOTP_SF_BROADCAST);
+#endif
 #ifdef CAN_J1939
     PyModule_AddIntMacro(m, CAN_J1939);
 #endif
